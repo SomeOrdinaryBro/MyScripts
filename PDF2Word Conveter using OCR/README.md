@@ -1,58 +1,70 @@
 # OCR PDF to Word Converter (Python Script)
 
-This script converts scanned or image-based PDF files into editable Word (.docx) documents using OCR (Optical Character Recognition).
+This is a small script I put together to convert scanned/image-based PDFs into editable Word (.docx) files using OCR.  
+Just follow the steps — no coding skills needed.
 
---------------------
-What you need to do first
---------------------
+---
 
-1. Install Python (version 3.11 or later)
-   Download from: https://www.python.org/downloads/
-   Make sure to check the box that says "Add Python to PATH" during installation.
+## First time setup (one-time things)
 
-2. Install required Python libraries
-   Open PowerShell and run:
+1. **Install Python (v3.11 or newer)**  
+   Download it from: [https://www.python.org/downloads/](https://www.python.org/downloads/)  
+   *Important:* when installing, make sure to tick the box that says **"Add Python to PATH."**
+
+2. **Install the required Python libraries**  
+   Open PowerShell and run this:
+   ```bash
    py -3.11 -m pip install pytesseract pdf2image python-docx
+   ```
 
-3. Install Tesseract OCR
-   Download the Windows installer from:
-   https://github.com/UB-Mannheim/tesseract/wiki
-   Example install path: D:\Tesseract-OCR\tesseract.exe
+3. **Install Tesseract OCR**  
+   Download it from: [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki)  
+   Example install path:  
+   `D:\Tesseract-OCR\tesseract.exe`
 
-4. Download Poppler for Windows
-   Download from: https://github.com/oschwartz10612/poppler-windows/releases
-   Extract it to a folder like:
-   D:\Tools\poppler\poppler-24.08.0\Library\bin
+4. **Download Poppler for Windows**  
+   Grab it from: [https://github.com/oschwartz10612/poppler-windows/releases](https://github.com/oschwartz10612/poppler-windows/releases)  
+   Extract it to somewhere like:  
+   `D:\Tools\poppler\poppler-24.08.0\Library\bin`
 
-You don’t need to add Poppler to PATH — the script will point to it directly.
+> You don’t need to mess with adding Poppler to PATH — the script already points to it directly.
 
---------------------
-How to run the script
---------------------
+---
 
-1. Place your PDF files into this folder:
-   C:\Users\Sajid.Sabreen\Downloads\ai\pdfs
+## How to use the script
 
-2. Open PowerShell and run:
+1. **Put your PDF files here:**  
+   `C:\Users\Sajid.Sabreen\Downloads\ai\pdfs`
+
+2. **Run the script**  
+   Open PowerShell and run:
+   ```bash
    py -3.11 main.py
+   ```
 
-3. The converted Word files will be saved to:
-   C:\Users\Sajid.Sabreen\Downloads\ai\pdfs\converted_docs
+3. **Where you’ll find the converted Word docs:**  
+   `C:\Users\Sajid.Sabreen\Downloads\ai\pdfs\converted_docs`
 
-Each page in the PDF will be scanned, the text extracted, and saved into a .docx file.
+Each page will get OCR scanned and converted into a Word file.
 
---------------------
-If something breaks
---------------------
+---
 
-- If you get a “package not found” error, re-run the install command:
+## If something breaks
+
+- **DO NOT CONTACT SAJID**
+
+- **Package not found error?**  
+  Just re-run:
+  ```bash
   py -3.11 -m pip install pytesseract pdf2image python-docx
+  ```
 
-- If it says “Poppler not found”, double-check that the Poppler folder path is correct in the script.
+- **Poppler not found?**  
+  Double-check the Poppler folder path inside the script. Make sure it's pointing correctly.
 
-- If it says “Tesseract not found”, make sure the path to tesseract.exe is correct and not commented out.
+- **Tesseract not found?**  
+  Make sure the `tesseract.exe` path is correct inside the script — and not commented out by mistake.
 
-This script doesn’t modify your files. It reads the PDFs, extracts text using OCR, and saves it to a new Word file.
+---
 
---------------------
-No coding knowledge needed. Just follow the steps and it should work.
+This script doesn’t touch your original PDFs. It just reads them, OCRs the text, and spits out a fresh Word document.
