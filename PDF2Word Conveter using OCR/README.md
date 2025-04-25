@@ -1,4 +1,4 @@
-OCR PDF to Word Converter (Python Script)
+# OCR PDF to Word Converter (Python Script)
 
 This script converts scanned or image-based PDF files into editable Word (.docx) documents using OCR (Optical Character Recognition).
 
